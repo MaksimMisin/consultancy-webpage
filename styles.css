@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --gray: #666666;
+    --light-gray: #e0e0e0;
+}
+
+html {
+    font-size: 18px;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--white);
+    color: var(--black);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+/* Header */
+header {
+    margin-bottom: 6rem;
+    border-bottom: 4px solid var(--black);
+    padding-bottom: 3rem;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 1.25rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.company {
+    font-size: 0.875rem;
+    color: var(--gray);
+    letter-spacing: 0.05em;
+}
+
+/* Bio */
+.bio {
+    margin-bottom: 6rem;
+}
+
+.bio p {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+    max-width: 60ch;
+}
+
+.bio p:last-child {
+    margin-bottom: 0;
+    font-weight: 700;
+}
+
+/* Projects */
+.projects {
+    margin-bottom: 6rem;
+}
+
+.projects h2 {
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+    border-bottom: 2px solid var(--black);
+    padding-bottom: 0.75rem;
+    display: inline-block;
+}
+
+.projects ul {
+    list-style: none;
+}
+
+.projects li {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.projects li:first-child {
+    border-top: 1px solid var(--light-gray);
+}
+
+.project-name {
+    display: block;
+    font-weight: 700;
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-desc {
+    display: block;
+    font-size: 0.9375rem;
+    color: var(--gray);
+    line-height: 1.5;
+}
+
+/* Footer */
+footer {
+    padding-top: 3rem;
+    border-top: 4px solid var(--black);
+}
+
+.contact {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contact a {
+    color: var(--black);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+    border-bottom: 2px solid var(--black);
+    padding-bottom: 0.25rem;
+    transition: border-color 0.2s ease;
+}
+
+.contact a:hover {
+    border-color: var(--gray);
+}
+
+.legal {
+    font-size: 0.75rem;
+    color: var(--gray);
+    letter-spacing: 0.05em;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    html {
+        font-size: 16px;
+    }
+
+    main {
+        padding: 3rem 1.5rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    header,
+    .bio,
+    .projects {
+        margin-bottom: 4rem;
+    }
+
+    .contact {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .contact a {
+        display: inline-block;
+    }
+}
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .title {
+        font-size: 1rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    body {
+        font-size: 12pt;
+    }
+
+    main {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .contact a {
+        border: none;
+    }
+
+    .contact a::after {
+        content: " (" attr(href) ")";
+        font-weight: 400;
+    }
+}
