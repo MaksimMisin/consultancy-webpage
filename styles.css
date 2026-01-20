@@ -75,12 +75,12 @@ h1 {
     font-weight: 700;
 }
 
-/* Projects */
-.projects {
+/* Services */
+.services {
     margin-bottom: 6rem;
 }
 
-.projects h2 {
+.services h2 {
     font-size: 0.875rem;
     font-weight: 700;
     letter-spacing: 0.2em;
@@ -91,27 +91,27 @@ h1 {
     display: inline-block;
 }
 
-.projects ul {
+.services ul {
     list-style: none;
 }
 
-.projects li {
+.services li {
     padding: 1.5rem 0;
     border-bottom: 1px solid var(--light-gray);
 }
 
-.projects li:first-child {
+.services li:first-child {
     border-top: 1px solid var(--light-gray);
 }
 
-.project-name {
+.service-name {
     display: block;
     font-weight: 700;
     font-size: 1.125rem;
     margin-bottom: 0.5rem;
 }
 
-.project-desc {
+.service-desc {
     display: block;
     font-size: 0.9375rem;
     color: var(--gray);
@@ -204,7 +204,7 @@ footer {
 
     header,
     .bio,
-    .projects {
+    .services {
         margin-bottom: 4rem;
     }
 
